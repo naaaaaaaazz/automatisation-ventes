@@ -26,9 +26,28 @@ automatisation-ventes/
 ├── resultats_final.csv
 ├── requirements.txt
 ├── image.png
+├── Figure_1.png 
 └── README.md
 ```
+## 🌐 Cloner le projet (GitHub)
+Le projet est disponible sur GitHub et peut être cloné pour exécution locale.
+
+Pour télécharger le projet :
+
+```
+git clone https://github.com/naaaaaaaazz/automatisation-ventes
+```
+
+Accéder au dossier :
+
+```
+cd automatisation-ventes
+```
+
+---
+
 ## ▶️ Installation et exécution
+Le projet est disponible sur GitHub et peut être cloné pour exécution locale.
 
 1. Créer un environnement virtuel :
 
@@ -81,9 +100,17 @@ ID;Prix;Quantite;Remise
 7. Génération d’un nouveau fichier `resultats_final.csv`
 8. Affichage des résultats sous forme de tableau
 
-## 📊 Visualisation
+## 🎯 Résultat attendu
 
-Le script génère un graphique en barres représentant le chiffre d’affaires net pour chaque produit.
+Après exécution, le programme :
+- Génère un fichier resultats_final.csv
+- Affiche le chiffre d’affaires total
+- Identifie le produit le plus rentable
+- Affiche un graphique des ventes
+
+## 📊 Visualisation
+Le script affiche un graphique en barres des ventes (chiffre d’affaires net par produit).
+
 <p align="center">
   <img src="Figure_1.png" width="500">
 </p>
@@ -109,12 +136,10 @@ Le fichier resultats_final.csv contient :
 ✔️ Lecture dynamique des fichiers CSV
 ✔️ Visualisation graphique avec matplotlib
 
-## 🔧 Gestion de version
+## 🔧 Gestion de version (Git)
+Le projet a été versionné à l’aide de Git afin de suivre les modifications du code.
 
-Le projet a été versionné à l’aide de Git afin de suivre les modifications du code et assurer une meilleure organisation du travail.
-
-Commandes utilisées :
-
+Commandes utilisées en local :
 ```
 git init
 git add .
@@ -123,15 +148,16 @@ git commit -m "Version finale du projet"
 
 ## 👩‍💻 Auteurs
 
-- **HOUAMI Molka** – Chef de projet & développeur backend  
-- **LOUATI Mariem** – Développeur frontend  
-- **JAZZAR Emna** – Concepteur de base de données  
+- **HOUAMI Molka**    
+- **LOUATI Mariem**  
+- **JAZZAR Emna**   
 
+Projet réalisé en collaboration.
 
 ## 🛑 Remarque
 
-Assurez-vous que le fichier ventes.csv est dans le même dossier que le script Python avant l’exécution.
-
+Assurez-vous que le fichier ventes.csv est présent dans le même dossier que le script Python avant l’exécution.
+Si vous avez cloné le projet via GitHub, tous les fichiers sont déjà correctement organisés.
 
 
 
