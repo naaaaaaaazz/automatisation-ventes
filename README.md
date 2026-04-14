@@ -143,7 +143,7 @@ Commandes utilisées en local :
 ```
 git init
 git add .
-git commit -m "Version finale du projet"
+git commit -m "Projet final"
 ```
 
 ## 👩‍💻 Auteurs
