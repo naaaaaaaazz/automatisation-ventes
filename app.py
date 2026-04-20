@@ -33,7 +33,7 @@ if file is not None:
     st.metric("Nombre de produits", len(df))
     st.metric("Meilleur CA", df["CA_Net"].max())
 
-    # 🏆 PRODUIT LE PLUS RENTABLE (AJOUT IMPORTANT)
+    # PRODUIT LE PLUS RENTABLE (AJOUT IMPORTANT)
     best_row = df.loc[df["CA_Net"].idxmax()]
     st.success(f"Produit avec le plus grand bénéfice : {best_row['ID']}")
 
