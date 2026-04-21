@@ -1,12 +1,19 @@
-# Automatisation des Ventes
+# Système d’Automatisation et d’Analyse des Ventes
 **Projet de Fin d'Année — Matière : Logiciels**
 
+## 🛠️ Technologies utilisées
+
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
+![Status](https://img.shields.io/badge/Status-Finished-brightgreen)
+![GitHub](https://img.shields.io/badge/GitHub-Project-black?logo=github)
+
 ---
+🔗 Dépôt GitHub : https://github.com/naaaaaaaazz/automatisation-ventes
 
 <p align="center">
   <img src="image.png" width="500">
 </p>
-
 
 ## 🖇️ Description
 Ce projet répond au besoin d’une entreprise de e-commerce dont le volume de données de ventes est devenu trop important pour être géré dans un tableur classique.
@@ -17,30 +24,42 @@ Automatiser le traitement et l’analyse des données de ventes afin de gagner d
 
 ---
 
+## 🚀 Présentation générale
+
+Ce projet est un système complet d’automatisation et d’analyse des ventes composé de trois modules :
+
+- 🐍 **Script Python** : traitement et analyse des données de ventes  
+- 📊 **Dashboard Streamlit** : visualisation interactive des résultats  
+- 🌐 **Application web (VentePro)** : interface HTML pour la gestion de caisse et l’analyse des ventes  
+
 ## 📁 Structure du projet
 ```
 automatisation-ventes/
 │
 ├── ventes.csv
 ├── vente.py
+├── vente.html
 ├── app.py
 ├── resultats_final.csv
 ├── requirements.txt
 ├── image.png
 ├── Figure_1.png 
+├── figure2.png
+├── apercudashboard.png
 └── README.md
 ```
-## 🌐 Cloner le projet (GitHub)
-Le projet est disponible sur GitHub et peut être cloné pour une exécution locale.
+## 🌐 Clonage et installation du projet
 
-## Prérequis : Configuration de Git
+### 📌 Prérequis
+
 Avant de commencer, configurez votre identité Git :
 
-```
+```bash
 git config --global user.name "Votre Nom"
 git config --global user.email "votre-email@exemple.com"
 ```
-### Étapes pour récupérer le projet avec VS Code
+
+### 📥 Clonage du projet avec VS Code
 1. Ouvrir Visual Studio Code
 2. Appuyer sur `Ctrl + Shift + P`
 3. Taper : Git: Clone
@@ -51,8 +70,7 @@ https://github.com/naaaaaaaazz/automatisation-ventes
 5. Choisir un dossier de destination sur votre ordinateur
 6. Cliquer sur Open pour ouvrir le projet dans VS Code
 
-## ▶️ Installation et exécution
-Le projet est disponible sur GitHub et peut être cloné pour exécution locale.
+### ▶️ Installation et exécution
 
 1. Créer un environnement virtuel :
 
@@ -175,27 +193,13 @@ Cette application fonctionne directement dans le navigateur, sans installation.
 
 ---
 
-### ⚙️ Fonctionnalités du site
+  ### ⚙️ Fonctionnalités du site
 
-- 🛒 Gestion de caisse :
-  - Ajout de produits (nom, prix, quantité)
-  - Catalogue rapide intégré
-  - Application de remises en pourcentage
-  - Ticket de caisse dynamique (CA Brut, CA Net, TVA, Total TTC)
-
-- 📊 Analyse des ventes :
-  - Tableau de bord avec indicateurs clés (KPI)
-  - Graphique en barres (CA Net par produit)
-  - Graphique circulaire (répartition des ventes)
-  - Export des données en CSV et JSON
-
-- 🗂 Historique :
-  - Consultation de toutes les ventes
-  - Import de données depuis un fichier Excel (.xlsx)
-
-- 🎨 Personnalisation :
-  - Thèmes de couleurs prédéfinis
-  - Personnalisation des couleurs de l’interface
+- Gestion de caisse (ajout de produits, remises, génération de tickets)
+- Tableau de bord avec KPI et graphiques
+- Historique des ventes
+- Import et export des données (CSV / Excel)
+- Interface web interactive et personnalisable
 
 ---
 
@@ -221,27 +225,33 @@ Le fichier resultats_final.csv contient :
 * Manipulation de fichiers CSV
 * Analyse de données
 * Visualisation avec Matplotlib
-* Gestion d’environnement virtuel (venv)
+* Gestion d'environnement virtuel (venv)
 * Utilisation de VS Code
 * Débogage (Debug)
-* Développement d’interface web (Streamlit)
+* Développement d'interface web (Streamlit)
+* Développement web front-end (HTML)
 * Git & GitHub
 
 ## ⭐ Bonus réalisés
 
-✔️ Lecture dynamique des fichiers CSV
-✔️ Visualisation graphique avec matplotlib
+✔️ Lecture dynamique des fichiers CSV  
+✔️ Visualisation graphique avec Matplotlib (barres + circulaire)  
+✔️ Dashboard interactif avec Streamlit  
+✔️ Site web complet (VentePro) avec gestion de caisse  
 
-## 🔧 Gestion de version (Git)
-Le projet a été versionné à l’aide de Git afin de suivre les modifications du code.
+## 🔧 Gestion du projet avec Git
 
-Commandes utilisées en local :
+Commandes utilisées :
+
 ```
 git init
 git add .
 git commit -m "Projet final"
-```
+git remote add origin https://github.com/naaaaaaaazz/automatisation-ventes
+git push -u origin main
 
+```
+👉 Ces commandes permettent d’initialiser un dépôt Git, sauvegarder les modifications et envoyer le projet sur GitHub.
 ## 👩‍💻 Auteurs
 
 - **HOUAMI Molka**    
@@ -250,10 +260,11 @@ git commit -m "Projet final"
 
 Projet réalisé en collaboration.
 
-
+---
 ## 🎯 Conclusion
 
-Ce projet permet d’automatiser l’analyse des données de ventes et de fournir une visualisation claire et interactive grâce à un dashboard développé avec Streamlit.
+Ce projet propose une solution complète de gestion et d’analyse des ventes basée sur Python, Streamlit et une interface web.
 
-Il améliore la prise de décision en entreprise en réduisant le temps de traitement manuel et en facilitant l’interprétation des données.
+Il automatise le traitement des données, réduit les tâches manuelles et fournit des visualisations interactives facilitant la prise de décision.
 
+L’ensemble illustre un flux complet allant de la collecte des données jusqu’à leur exploitation.
