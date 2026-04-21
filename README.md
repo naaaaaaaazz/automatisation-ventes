@@ -128,7 +128,7 @@ Le script affiche :
 ### 🥧 Graphique circulaire
 
 <p align="center">
-  <img src="Figure2.png" width="500">
+  <img src="figure2.png" width="500">
 </p>
 
 ## 🌐 Dashboard interactif (Streamlit)
