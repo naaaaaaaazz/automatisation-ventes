@@ -114,10 +114,21 @@ Après exécution, le programme :
 - Affiche un graphique des ventes
 
 ## 📊 Visualisation
-Le script affiche un graphique en barres des ventes (chiffre d’affaires net par produit).
+
+Le script affiche :
+- un graphique en barres (CA net par produit)
+- un graphique circulaire (répartition des ventes)
+
+### 📈 Graphique en barres
 
 <p align="center">
   <img src="Figure_1.png" width="500">
+</p>
+
+### 🥧 Graphique circulaire
+
+<p align="center">
+  <img src="Figure2.png" width="500">
 </p>
 
 ## 🌐 Dashboard interactif (Streamlit)
@@ -156,6 +167,49 @@ streamlit run app.py
   <img src="apercudashboard.png" width="500">
 </p>
 
+## 🌐 Site Web interactif (VentePro)
+
+En complément du script Python, une interface web moderne a été développée afin de gérer la caisse et analyser les ventes de manière simple, rapide et interactive.
+
+Cette application fonctionne directement dans le navigateur, sans installation.
+
+---
+
+### ⚙️ Fonctionnalités du site
+
+- 🛒 Gestion de caisse :
+  - Ajout de produits (nom, prix, quantité)
+  - Catalogue rapide intégré
+  - Application de remises en pourcentage
+  - Ticket de caisse dynamique (CA Brut, CA Net, TVA, Total TTC)
+
+- 📊 Analyse des ventes :
+  - Tableau de bord avec indicateurs clés (KPI)
+  - Graphique en barres (CA Net par produit)
+  - Graphique circulaire (répartition des ventes)
+  - Export des données en CSV et JSON
+
+- 🗂 Historique :
+  - Consultation de toutes les ventes
+  - Import de données depuis un fichier Excel (.xlsx)
+
+- 🎨 Personnalisation :
+  - Thèmes de couleurs prédéfinis
+  - Personnalisation des couleurs de l’interface
+
+---
+
+### ▶️ Lancer le site (serveur local)
+
+```
+python -m http.server 8000
+``` 
+
+Puis ouvrir dans le navigateur :
+
+```
+http://localhost:8000/vente.html
+``` 
 ## 📤 Fichier de sortie
 
 Le fichier resultats_final.csv contient :
