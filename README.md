@@ -46,6 +46,7 @@ automatisation-ventes/
 ├── Figure_1.png 
 ├── figure2.png
 ├── apercudashboard.png
+├── apercu-site.png
 └── README.md
 ```
 ## 🌐 Clonage et installation du projet
@@ -214,6 +215,13 @@ Puis ouvrir dans le navigateur :
 ```
 http://localhost:8000/vente.html
 ``` 
+### 📸 Aperçu du site web
+
+#### 📊 Analyse des ventes (import CSV + résultats)
+<p align="center">
+  <img src="apercu-site.png" width="500">
+</p>
+
 ## 📤 Fichier de sortie
 
 Le fichier resultats_final.csv contient :
