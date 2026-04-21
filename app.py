@@ -44,5 +44,5 @@ if file is not None:
         "📥 Télécharger les résultats",
         csv,
         "resultats.csv",
-        "text/csv
+        "text/csv"
     )
