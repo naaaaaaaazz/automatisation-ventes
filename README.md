@@ -43,8 +43,8 @@ automatisation-ventes/
 ├── resultats_final.csv
 ├── requirements.txt
 ├── image.png
-├── Figure_1.png 
-├── figure2.png
+├── graph_barres.png
+├── fgraph_cercle.png
 ├── apercudashboard.png
 ├── apercu-site.png
 └── README.md
@@ -141,13 +141,13 @@ Le script affiche :
 ### 📈 Graphique en barres
 
 <p align="center">
-  <img src="Figure_1.png" width="500">
+  <img src="graph_barres.png" width="500">
 </p>
 
 ### 🥧 Graphique circulaire
 
 <p align="center">
-  <img src="figure2.png" width="500">
+  <img src="graph_cercle.png" width="500">
 </p>
 
 ## 🌐 Dashboard interactif (Streamlit)
@@ -183,7 +183,7 @@ streamlit run app.py
 
 💡 Capture d’écran après importation du fichier CSV et affichage des résultats
 <p align="center">
-  <img src="apercudashboard.png" width="500">
+  <img src="apercu-dashboard.png" width="500">
 </p>
 
 ## 🌐 Site Web interactif (VentePro)
@@ -219,7 +219,7 @@ http://localhost:8000/vente.html
 
 #### 📊 Analyse des ventes (import CSV + résultats)
 <p align="center">
-  <img src="apercu-site.png" width="500">
+  <img src="apercu-web.png" width="500">
 </p>
 
 ## 📤 Fichier de sortie
