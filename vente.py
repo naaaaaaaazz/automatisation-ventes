@@ -1,5 +1,5 @@
 # ==============================
-# 📚 IMPORTATIONS
+#  IMPORTATIONS
 # ==============================
 import csv                  # lecture/écriture CSV
 import random              # génération de données aléatoires
@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt  # graphiques
 
 
 # ==============================
-# 🎯 1. NOMBRE DE LIGNES DYNAMIQUE
+#  1. NOMBRE DE LIGNES DYNAMIQUE
 # ==============================
 
 # si l'utilisateur donne une valeur dans le terminal
@@ -17,11 +17,11 @@ if len(sys.argv) > 1:
 else:
     nb_lignes = 15  # valeur par défaut
 
-print(f"📊 Génération de {nb_lignes} lignes...\n")
+print(f" Génération de {nb_lignes} lignes...\n")
 
 
 # ==============================
-# 🎲 2. GÉNÉRATION DU FICHIER CSV
+#  2. GÉNÉRATION DU FICHIER CSV
 # ==============================
 
 random.seed(42)  # reproductibilité des données
@@ -45,7 +45,7 @@ print("✔ ventes.csv généré avec succès.\n")
 
 
 # ==============================
-# 📖 3. LECTURE + CALCULS
+#  3. LECTURE + CALCULS
 # ==============================
 
 ids = []
@@ -87,15 +87,15 @@ with open("ventes.csv", "r") as f:
 
 
 # ==============================
-# 📊 4. RÉSULTATS
+#  4. RÉSULTATS
 # ==============================
 
-print("\n📌 CA Total =", round(total, 2))
-print("🏆 Produit le plus rentable =", id_max)
+print("\n CA Total =", round(total, 2))
+print(" Produit le plus rentable =", id_max)
 
 
 # ==============================
-# 📊 5. GRAPHIQUE BARRES
+#  5. GRAPHIQUE BARRES
 # ==============================
 
 plt.figure(figsize=(12,6))
@@ -115,7 +115,7 @@ plt.show()
 
 
 # ==============================
-# 🥧 6. GRAPHIQUE CIRCULAIRE
+#  6. GRAPHIQUE CIRCULAIRE
 # ==============================
 
 plt.figure(figsize=(8,8))
@@ -137,7 +137,7 @@ plt.show()
 
 
 # ==============================
-# 💾 7. EXPORT CSV FINAL
+#  7. EXPORT CSV FINAL
 # ==============================
 
 with open("resultats_final.csv", "w", newline="") as f:
