@@ -16,11 +16,11 @@
 </p>
 
 ## 🖇️ Description
-Ce projet répond au besoin d’une entreprise de e-commerce dont le volume de données de ventes est devenu trop important pour être géré dans un tableur classique.
-Un script Python a été développé pour automatiser la lecture du fichier CSV, effectuer les calculs financiers (chiffre d’affaires brut, net et TVA), identifier le produit le plus rentable, générer un fichier de résultats et proposer une visualisation graphique.
+Ce projet répond au besoin d'une entreprise de e-commerce dont le volume de données de ventes est devenu trop important pour être géré dans un tableur classique.
+Un script Python a été développé pour générer automatiquement des données de ventes aléatoires, effectuer les calculs financiers (chiffre d'affaires brut, net et TVA), identifier le produit le plus rentable, générer un fichier de résultats et proposer une visualisation graphique.
 
 ## 📍Objectif
-Automatiser le traitement et l’analyse des données de ventes afin de gagner du temps, réduire les erreurs et faciliter la prise de décision.
+Automatiser la génération, le traitement et l'analyse des données de ventes afin de gagner du temps, réduire les erreurs et faciliter la prise de décision.
 
 ---
 
@@ -28,9 +28,9 @@ Automatiser le traitement et l’analyse des données de ventes afin de gagner d
 
 Ce projet est un système complet d’automatisation et d’analyse des ventes composé de trois modules :
 
-- 🐍 **Script Python** : traitement et analyse des données de ventes  
+- 🐍 **Script Python** : génération, traitement et analyse des données de ventes  
 - 📊 **Dashboard Streamlit** : visualisation interactive des résultats  
-- 🌐 **Application web (VentePro)** : interface HTML pour la gestion de caisse et l’analyse des ventes  
+- 🌐 **Application web (VentePro)** : interface HTML pour la gestion de caisse et l'analyse des ventes  
 
 ## 📁 Structure du projet
 ```
@@ -44,32 +44,20 @@ automatisation-ventes/
 ├── requirements.txt
 ├── image.png
 ├── graph_barres.png
-├── fgraph_cercle.png
-├── apercudashboard.png
-├── apercu-site.png
+├── graph_cercle.png
+├── apercu-dashboard.png
+├── apercu-web.png
 └── README.md
 ```
 ## 🌐 Clonage et installation du projet
 
-### 📌 Prérequis
-
-Avant de commencer, configurez votre identité Git :
+### 📥 Clonage du projet
 
 ```bash
-git config --global user.name "Votre Nom"
-git config --global user.email "votre-email@exemple.com"
+git clone https://github.com/naaaaaaaazz/automatisation-ventes
+cd automatisation-ventes
+code .
 ```
-
-### 📥 Clonage du projet avec VS Code
-1. Ouvrir Visual Studio Code
-2. Appuyer sur `Ctrl + Shift + P`
-3. Taper : Git: Clone
-4. Coller l’URL du dépôt GitHub :
-```
-https://github.com/naaaaaaaazz/automatisation-ventes 
-```
-5. Choisir un dossier de destination sur votre ordinateur
-6. Cliquer sur Open pour ouvrir le projet dans VS Code
 
 ### ▶️ Installation et exécution
 
@@ -96,41 +84,42 @@ pip install -r requirements.txt
 ```
 python vente.py
 ```
+> Vous pouvez également spécifier le nombre de lignes à générer :
+ ```
+python vente.py <nombre_de_lignes>
+ ```
+ Par défaut, **15 lignes** sont générées.
 
 ## 📥 Données d'entrée  
-Le fichier ventes.csv doit utiliser le point-virgule `;` comme séparateur et contient les informations suivantes :
+Le fichier `ventes.csv` est **généré automatiquement** par le script à chaque exécution.  
+Il utilise le point-virgule `;` comme séparateur 
+> Le script utilise `random.seed(42)` pour garantir des données **reproductibles** : 
+> chaque exécution génère exactement les mêmes valeurs.
 
-```
-ID;Prix;Quantite;Remise
-101;15.0;3;10
-102;25.0;2;5
-...
-120;80.0;1;20
-```
-
-- **ID** : Identifiant du produit  
-- **Prix** : Prix unitaire  
-- **Quantite** : Quantité vendue  
-- **Remise** : Réduction (%)
+- **ID** : Identifiant du produit (commence à 100)
+- **Prix** : Prix unitaire (entre 5.00 et 100.00 €)
+- **Quantite** : Quantité vendue (entre 1 et 50)
+- **Remise** : Réduction en % (entre 1 et 100)
 
 
 ## ⚙️ Fonctionnalités
-1. Lecture du fichier csv `ventes.csv`
-2. Calcul du **CA Brut** (Chiffre d’Affaires Brut) : `Prix × Quantité`
-3. Calcul du **CA Net** (Chiffre d’Affaires Net) : `CA_Brut × (1 - Remise / 100)`
+1. Génération aléatoire du fichier `ventes.csv` (nombre de lignes configurable)
+2. Calcul du **CA Brut** (Chiffre d'Affaires Brut) : `Prix × Quantité`
+3. Calcul du **CA Net** (Chiffre d'Affaires Net) : `CA_Brut × (1 - Remise / 100)`
 4. Calcul de la **TVA** (20%) : `CA_Net × 0.20`
-5. Affichage du **CA Total** de l'entreprise `Somme de tous les CA Net`
+5. Affichage du **CA Total** de l'entreprise : `Somme de tous les CA Net`
 6. Identification du **produit le plus rentable**
-7. Génération d’un nouveau fichier `resultats_final.csv`
+7. Génération d'un nouveau fichier `resultats_final.csv`
 8. Affichage des résultats sous forme de tableau
 
 ## 🎯 Résultat attendu
 
 Après exécution, le programme :
-- Génère un fichier resultats_final.csv
-- Affiche le chiffre d’affaires total
+- Génère un fichier `ventes.csv` avec des données aléatoires
+- Génère un fichier `resultats_final.csv` avec les calculs
+- Affiche le chiffre d'affaires total
 - Identifie le produit le plus rentable
-- Affiche un graphique des ventes
+- Affiche deux graphiques des ventes
 
 ## 📊 Visualisation
 
@@ -230,6 +219,9 @@ Le fichier resultats_final.csv contient :
 ## 🧠 Compétences mobilisées
 
 * Programmation en Python
+* Génération de données aléatoires (`random`)
+* Gestion des arguments en ligne de commande (`sys.argv`)
+* Reproductibilité des données avec `random.seed()`
 * Manipulation de fichiers CSV
 * Analyse de données
 * Visualisation avec Matplotlib
@@ -237,17 +229,19 @@ Le fichier resultats_final.csv contient :
 * Utilisation de VS Code
 * Débogage (Debug)
 * Développement d'interface web (Streamlit)
-* Développement web front-end (HTML)
+* Développement web (HTML)
 * Git & GitHub
 
 ## ⭐ Bonus réalisés
 
-✔️ Lecture dynamique des fichiers CSV  
+✔️ Génération dynamique des données CSV (nombre de lignes configurable via terminal)  
 ✔️ Visualisation graphique avec Matplotlib (barres + circulaire)  
 ✔️ Dashboard interactif avec Streamlit  
 ✔️ Site web complet (VentePro) avec gestion de caisse  
+ 
 
 ## 🔧 Gestion du projet avec Git
+### 📤 Initialisation et envoi
 
 Commandes utilisées :
 
@@ -260,6 +254,15 @@ git push -u origin main
 
 ```
 👉 Ces commandes permettent d’initialiser un dépôt Git, sauvegarder les modifications et envoyer le projet sur GitHub.
+
+### 🔄 Mise à jour du projet
+
+- `git fetch origin` : récupère les modifications depuis GitHub (sans les appliquer)  
+- `git merge origin/main` : applique les modifications récupérées au projet  
+- `git pull origin main` : récupère **et** applique les modifications automatiquement  
+
+👉 Permet de synchroniser le projet local avec la version distante sur GitHub.
+
 ## 👩‍💻 Auteurs
 
 - **HOUAMI Molka**    
@@ -268,11 +271,17 @@ git push -u origin main
 
 Projet réalisé en collaboration.
 
+## 🚀 Améliorations possibles
+
+- Ajouter une base de données
+- Déployer le dashboard en ligne
+- Améliorer l’interface du site web 
+
 ---
 ## 🎯 Conclusion
 
-Ce projet propose une solution complète de gestion et d’analyse des ventes basée sur Python, Streamlit et une interface web.
+Ce projet propose une solution complète de génération, gestion et analyse des ventes basée sur Python, Streamlit et une interface web.
 
-Il automatise le traitement des données, réduit les tâches manuelles et fournit des visualisations interactives facilitant la prise de décision.
+Il automatise la création et le traitement des données, réduit les tâches manuelles et fournit des visualisations interactives facilitant la prise de décision.
 
-L’ensemble illustre un flux complet allant de la collecte des données jusqu’à leur exploitation.
+L'ensemble illustre un flux complet allant de la génération des données jusqu'à leur exploitation.
