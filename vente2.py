@@ -24,7 +24,7 @@ data = []
 for i in range(nb_lignes):
 
     id_produit = 100 + i
-    prix = random.uniform(5, 100), 2
+    prix = round(random.uniform(5, 100), 2)
     quantite = random.randint(1, 50)
     remise = random.randint(1, 100)
 
