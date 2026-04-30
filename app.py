@@ -7,7 +7,7 @@ st.title("📊 Analyse des ventes")
 file = st.file_uploader("Importer votre fichier CSV", type=["csv"])
 
 if file is not None:
-    df = pd.read_csv(file, sep=";")
+    df = pd.read_csv(file, sep=",")
 
     st.write("### Données du fichier")
     st.dataframe(df)
