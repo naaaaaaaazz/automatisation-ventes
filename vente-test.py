@@ -22,7 +22,7 @@ data = {
 df = pd.DataFrame(data)
 
 # sauvegarde CSV brut
-df.to_csv("ventes.csv", index=False)
+df.to_csv("vente-test.csv", index=False)
 print("✔ ventes.csv généré !")
 
 # ==============================
@@ -47,7 +47,7 @@ print(f" Meilleur produit : ID {meilleur['ID']} → {meilleur['CA_Net']:.2f} €
 #  4. EXPORT FINAL
 # ==============================
 
-df.to_csv("resultats_final.csv", index=False)
+df.to_csv("resultats_final-test.csv", index=False)
 print("✔ resultats_final.csv exporté !")
 
 # ==============================
