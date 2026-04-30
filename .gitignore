@@ -4,6 +4,4 @@ venv/
 # Données générées
 *.csv
 
-# Images générées (graphiques, dashboard)
-*.png
 
