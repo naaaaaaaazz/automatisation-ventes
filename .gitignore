@@ -1,0 +1,9 @@
+# Environnement virtuel
+venv/
+
+# Données générées
+*.csv
+
+# Images générées (graphiques, dashboard)
+*.png
+
